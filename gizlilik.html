@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunedio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <div id="logo" class="logo">
+
+            <b>bunedio</b>
+
+        </div><br>
+
+        <div class="baslik">SAYFALAR</div>
+        <div class="line"></div>
+
+        <div class="sayfalar">
+            <a href="anasayfa.html">Ana Sayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="gizlilik.html">Gizlilik Politikası</a>
+            <a href="siteharitasi.html">Site Haritası</a>
+            <a href="iletisim.html">İletişim</a>
+
+
+        </div>
+
+        <div class="baslik">KATEGORİLER</div>
+        <div class="line"></div>
+
+        <div class="sayfalar">
+            <a href="gifler.html">Gifler</a>
+            <a href="casplar.html">Capslar</a>
+            <a href="replikler.html">Replikler</a>
+            <a href="alintilar.html">Kitap Alıntıları</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="sosyal">
+            <a href="https://www.instagram.com/emirhann_bb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+
+            <p>Tüm hakları saklıdır © 2020 Bunedio.</p>
+
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/1917.jpg" style="width:100%">
+                <div class="text">Tavsiye Film: 1917</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/hacksaw.jpg" style="width:100%">
+                <div class="text">Tavsiye Film: Hacksaw Ridge</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/spartacus.jpg" style="width:100%">
+                <div class="text">Tavsiye Dizi: Vikings</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+        <div class="sonyazilar">
+
+
+            <h1>Gizlilik Politikası</h1>
+           <p>Bunedio sitesi olarak kişisel gizlilik haklarınıza saygı duyuyor ve sitemizde geçirdiğiniz süre zarfında bunu sağlamak için çaba sarf ediyoruz. Kişisel bilgilerinizin güvenliği ile ilgili açıklamalar aşağıda açıklanmış ve bilginize sunulmuştur.
+<br>
+<br>
+            <b>Kayıt Dosyaları</b>
+            <br>
+            Birçok standard web sunucusunda olduğu gibi Bunedio‘da istatistiksel amaçlı log dosyaları kaydı tutmaktadır. Bu dosyalar; ip adresiniz, internet servis sağlayıcınız, tarayıcınızın özellikleri, işletim sisteminiz ve siteye giriş-çıkış sayfalarınız gibi standard bilgileri içermektedir. Log dosyaları kesinlikle istatistiksel amaçlar dışında kullanılmamakta ve mahremiyetinizi ihlal etmemektedir. IP adresiniz ve diğer bilgiler, şahsi bilgileriniz ile ilişkilendirilmemektedir.
+            <br>
+            <br>
+            <b>Reklamlar</b>
+            <br>
+            Sitemizde dışarıdan şirketlerin reklamlarını yayınlamaktayız (Google, v.s.). Bu reklamlar çerez (cookıes) içerebilir ve bu sirketler tarafından çerez bilgileri toplanabilir ve bizim bu bilgiye ulaşmamız mümkün değildir. Biz Google Adsense, vb. şirketler ile çalışmaktayız lütfen onların ilgili sayfalarından gizlilik sözleşmelerini okuyunuz.
+            <br>
+            <br>
+           <b>Çerezler (Cookies)</b> 
+            <br>
+            “Cookie – Çerez” kelimesi web sayfası sunucusunun sizin bilgisayarınızın hard diskine yerleştirdiği ufak bir text dosyasını tanımlamak için kullanılmaktadır. Sitemizin bazı bölümlerinde kullanıcı kolaylığı sağlamak için çerez kullanılıyor olabilir. Ayrıca sitede mevcut bulunan reklamlar aracılığıyla, reklam verilerinin toplanması için cookie ve web beacon kullanılıyor olabilir. Bu tamamen sizin izninizle gerçekleşiyor olup, isteğiniz dahilinde internet tarayıcınızın ayarlarını değiştirerek bunu engellemeniz mümkündür.
+            <br>
+            <br>
+            <b>Dış Bağlantılar</b>
+            <br>
+            Bunedio sitesi, sayfalarından farklı internet adreslerine bağlantı vermektedir.Bunedio link verdiği, banner tanıtımını yaptığı sitelerin içeriklerinden veya gizlilik prensiplerinden sorumlu değildir. Burada bahsedilen bağlantı verme işlemi, hukuki olarak “atıfta bulunma” olarak değerlendirilmektedir.
+            <br>
+            <br>
+           <b> İletişim</b>
+            <br>
+            Bunedio sitesinde uygulanan gizlilik politikası ile ilgili; her türlü soru, görüş ve düşüncelerinizi bize Bunedio adresinden iletebilirsiniz.</p>
+            
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+
+         
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunedio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <script>
+        var kullaniciadi = ["admin"];
+        var sifre = ["admin"];
+        function girisYap() {
+
+
+            var kadi = document.getElementById("kadi").value;
+            var password = document.getElementById("sifre").value;
+            var i;
+            var onay1 = false;
+            var onay2 = false;
+
+
+            for (i = 0; i < kullaniciadi.length; i++) {
+                if (kullaniciadi[i] == kadi) {
+
+                    onay1 = true;
+                }
+
+
+
+            }
+
+            for (i = 0; i < sifre.length; i++) {
+
+                if (sifre[i] == password) {
+                    onay2 = true;
+                }
+
+            }
+
+            if (onay1 == true && onay2 == true) {
+                window.location.replace("anasayfa.html")
+            }
+
+            if (onay1 == true && onay2 == false) {
+                document.getElementById("durum").innerHTML = "Şifreyi yanlış girdiniz!!!";
+            }
+
+            if (onay1 == false && onay2 == true) {
+                document.getElementById("durum").innerHTML = "Kullanıcı Adınızı yanlış girdiniz!!!";
+            }
+
+            if (onay1 == false && onay2 == false) {
+                document.getElementById("durum").innerHTML = "Kullanıcı Adı ve Şifreyi yanlış girdiniz!!!";
+            }
+
+
+
+
+        }
+
+
+        function uyeOl() {
+            var uyeKullaniciAdi;
+            var uyeSifre;
+
+            uyeKullaniciAdi = document.getElementById("kadi").value;
+            uyeSifre = document.getElementById("sifre").value;
+            kullaniciadi.push(uyeKullaniciAdi);
+            sifre.push(uyeSifre);
+         
+
+            document.getElementById("durum").innerHTML = "Üyeliğiniz başarıyla gerçekleştirildi!";
+        }
+
+
+
+
+    </script>
+
+
+
+    <div class="logo">
+
+        <b>bunedio</b>
+
+    </div>
+
+    <div class="form">
+        <h1> Üye Girişi</h1>
+        <form>
+            <input type="text" id="kadi" placeholder="Kullanıcı Adı"></input>
+            <input type="password" id="sifre" placeholder="Şifre"></input>
+        </form>
+        <button onclick="girisYap()">Giriş Yap</button>
+        <p style="color: red; font-weight: bold;" id="durum"></p> <br>
+        <p> <a href="javascript:uyeOl();">Hemen Girdiğin Bilgiler İle <b>Üye Ol</b></a></p><br>
+        <p>Hocam Kullanıcı Adı: admin Şifre: admin bilgileri ile giriş yapabilirsiniz. Veya yeni üyelik oluşturabilirsiniz. </p>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
